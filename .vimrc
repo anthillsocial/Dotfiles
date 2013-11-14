@@ -1,5 +1,13 @@
-" enable easy moduel managemnt"
+"enable easy moduel managemnt"
 execute pathogen#infect()
+let g:airline_powerline_fonts=1 "make the powerline look groovy
+"Settings for vim-pad notetaking app
+let g:pad_dir = "~/Notes/"
+let g:pad_window_height=16
+let g:pad_window_width=40
+"let g:pad_position_list="right"
+"let g:pad_postion_pads="right"
+"let g:pad_open_in_split=0
 " Ideas for this vim setup taken from: 
 "     http://nvie.com/posts/how-i-boosted-my-vim/
 set nocompatible

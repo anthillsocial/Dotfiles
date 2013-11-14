@@ -1,3 +1,5 @@
+" enable easy moduel managemnt"
+execute pathogen#infect()
 " Ideas for this vim setup taken from: 
 "     http://nvie.com/posts/how-i-boosted-my-vim/
 set nocompatible

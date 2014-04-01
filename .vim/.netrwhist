@@ -1,10 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/tomkeene/Dropbox/Notational Data'
-let g:netrw_dirhist_2='/home/tomkeene/Notes'
-let g:netrw_dirhist_3='/home/tomkeene/myconfig/.vim/bundle'
-let g:netrw_dirhist_4='/home/tomkeene/myconfig/.vim'
-let g:netrw_dirhist_5='/home/tomkeene/myconfig'
-let g:netrw_dirhist_6='/home/tomkeene/myconfig/.vim/bundle'
-let g:netrw_dirhist_7='/home/tomkeene/myconfig/.vim'
-let g:netrw_dirhist_8='/home/tomkeene/myconfig'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/tomkeene/mnt/anthill/legit.theanthillsocial.co.uk/themes/legit/views/main'
+let g:netrw_dirhist_2='/home/tomkeene/mnt/anthill/legit.theanthillsocial.co.uk/themes/legit/views/reports'
+let g:netrw_dirhist_3='/home/tomkeene/mnt/anthill/legit.theanthillsocial.co.uk/themes/legit/views'
+let g:netrw_dirhist_4='/home/tomkeene/mnt/anthill/legit.theanthillsocial.co.uk/themes/legit'
+let g:netrw_dirhist_5='/home/tomkeene/mnt/anthill/legit.theanthillsocial.co.uk/themes/legit/css'

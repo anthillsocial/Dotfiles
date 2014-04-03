@@ -1,8 +1,7 @@
-myconfig
+My Dot Files
 ========
 
-My configeration file for vim (and possibly others in the future) to 
-enable easy switching between machines. I simply create a sym link
+My configeration files for Arch Linux to enable easy switching between machines. I simply create a symlink
 to the myconfig directory in order to start using this config on any 
 machine I am logged into:
   $ ln -s myconfig/.vimrc .vimrc
@@ -14,3 +13,5 @@ and they will be added to the 'runtimepath'" i.e:
 
 	cd ~/myconfig/.vim/bundle
 	git clone git://github.com/tpope/vim-sensible.git
+	
+I also use the cinnamon desktop.

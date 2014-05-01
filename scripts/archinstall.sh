@@ -4,7 +4,17 @@ DEFAULTUSER=tom
 
 start_me(){
 	#installA
-	installB
+	#installB
+	installC
+}
+installC(){
+	# Install packer
+	pacman -S base-devel fakeroot jshon expac
+	mkdir /opt/packer
+        cd /opt/packer
+  	wget https://aur.archlinux.org/packages/pa/packer/PKGBUILD
+        makepkg
+        pacman -U packer-*.pkg.tar.gz
 }
 installB(){
 	pacman -S ntp
@@ -16,6 +26,10 @@ installB(){
 
         #Mouse and trackpad
         pacman -S xf86-input-synaptics
+	
+        # Add the 'locate' command for quck file searching
+        pacman -S mlocate
+        updatedb
 }
 installA(){
 	# THE INSTALL SCRIPT
@@ -28,6 +42,10 @@ installA(){
 
 	# Install some default apps
 	pacman -S vim sudo git alsa-utils
+        
+        # And setup pacman
+	pacman-key --init
+	pacman-key --populate archlinux
 
 	# Set the locale
 	echo "en_GB.UTF-8 UTF-8 " >> /etc/locale.gen
@@ -41,7 +59,7 @@ installA(){
 	reflector --verbose -l 100 --sort rate --save /etc/pacman.d/mirrorlist
 
 	# Set fonts
-	pacman -S terminus-font
+	pacman -S terminus-font ttf-dejavu
 	setfont ter-p16n.psf.gz
 	echo -e "KEYMAP=uk\nFONT=ter-p16n.psf.gz" > /etc/vconsole.conf
 

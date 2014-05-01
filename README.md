@@ -5,7 +5,7 @@ Scripts
 -------------
 A collection of scripts I use for general maintance or running of a number of Linux boxes I use.
 
-My Dot Files
+Dotfiles
 -------------
 
 My configeration files for Arch Linux to enable easy switching between machines. I simply create a symlink

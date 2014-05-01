@@ -1,5 +1,12 @@
+Linux Helpers
+=============
+
+Scripts
+-------------
+A collection of scripts I use for general maintance or running of a number of Linux boxes I use.
+
 My Dot Files
-========
+-------------
 
 My configeration files for Arch Linux to enable easy switching between machines. I simply create a symlink
 to the myconfig directory in order to start using this config on any 

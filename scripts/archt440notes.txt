@@ -1,0 +1,10 @@
+# Created:
+/etc/modprobe.d/nouveau_blacklist.conf
+----------------------------------------
+blacklist nouveau
+
+# To fix BTRFS
+btrfs scrub status /
+
+
+

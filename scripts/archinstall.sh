@@ -12,9 +12,10 @@ start_me(){
 	#installB
 	#installC
 	#installvideo
-	#installT440p
+	#installT440pvideo
 	#installdesktop
-	installcinnamon
+	#installcinnamon
+	installdesktopapps
 	#checkforerrors
 }
 installcinnamon(){
@@ -22,27 +23,30 @@ installcinnamon(){
 	echo "Add to: pacman.conf\n[cinnamon]\nServer = http://www.equinox-project.org/repos/arch/$arch\n"
 	echo "Add to: ~/.xinitrc\nexec cinnamon-session"
 }
+installdesktopapps(){
+	packer -S zim-bzr gnome-terminal chromium
+}
 checkforerrors(){
  	# search for potential errors in dmesg or journalctl
 	dmesg | egrep -i -A2 -B2 'unsupported|warn|error|disabl|not|doesn|bug' 
 }
 instalvideo(){
-	# Video
+	# Xorg dispaly install
 	pacman -S xorg-server xorg-xinit xorg-server-utils mesa xorg-twm xorg-xclock xterm 
 
-	# Intel driver
-	pacman -S xf86-video-intel lib32-intel-dri
-	
-	# for newer Intel GPU's
-	pacman -S libva-intel-driver
+	# Idenify video cards
+	lspci | grep VGA
+
+	#Install a default fallback video driver
+	pacman -S xf86-video
 }
-installT440p(){
+installT440pvideo(){
 	#video dependencies
 	pacman -S intel-dri xf86-video-intel bumblebee primus virtualgl 
         
 	#Potential issues with:
-	#pacman -S bbswitch
-	#pacman -S lib32-virtualgl lib32-primus nvidia lib32-nvidia-utils lib32-intel-dri
+	pacman -S bbswitch
+	pacman -S lib32-virtualgl lib32-primus nvidia lib32-nvidia-utils lib32-intel-dri
 	
 	# Video switching
 	gpasswd -a root bumblebee
@@ -124,6 +128,7 @@ installnetwork(){
 	ip a
         systemctl enable netctl-ifplugd@ETHITERFACE.service
         systemctl enable netctl-auto@WIFIINTERFACE.service
+	# if a card gets blocked then issue an: rfkill unblock 2
 }
 installmanual(){
 	# Do by hand

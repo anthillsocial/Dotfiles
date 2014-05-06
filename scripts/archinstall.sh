@@ -9,14 +9,15 @@ start_me(){
 	#installA
 	#installnetwork
 	#installmanual
-	#installB
-	#installC
+	#installmousetrackpad
+	#installsearch
+	#installpacker
 	#installvideo
 	#installT440pvideo
 	#installdesktop
 	#installcinnamon
-	installdesktopapps
-	#checkforerrors
+	#installdesktopapps
+	checkforerrors
 }
 installcinnamon(){
 	pacman -S cinnamon
@@ -24,7 +25,11 @@ installcinnamon(){
 	echo "Add to: ~/.xinitrc\nexec cinnamon-session"
 }
 installdesktopapps(){
-	packer -S zim-bzr gnome-terminal chromium
+	packer -S zim-bzr dropbox nemo-dropbox-git
+	packan -S gnome-terminal chromium nemo
+	# Create service
+	systemctl enable dropboxd.service
+	systemctl start dropbox.d.servcice
 }
 checkforerrors(){
  	# search for potential errors in dmesg or journalctl
@@ -54,7 +59,7 @@ installT440pvideo(){
 	systemctl enable bumblebeed.service
 	systemctl start bumblebeed.service
 }
-installC(){
+installpacker(){
 	# TODO: This section needs work!!
 	# Install packer 
 	pacman -S base-devel fakeroot jshon expac
@@ -65,10 +70,11 @@ installC(){
         makepkg
         pacman -U packer-*.pkg.tar.gz
 }
-installB(){
+installmousetrackpad(){
         #Mouse and trackpad
         pacman -S xf86-input-synaptics
-	
+}
+installsearch(){
         # Add the 'locate' command for quck file searching
         pacman -S mlocate
         updatedb

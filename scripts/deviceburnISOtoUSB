@@ -1,0 +1,5 @@
+echo "Plug in USB and check device is present with $ ls /dev OR $ df -h" 
+ls /dev
+echo "unmount the device with soemthing like $ sudo umount /dev/sdb*'"
+sudo umount /dev/sdb*
+echo "then try: $ sudo dcfldd bs=4M if=YOUR.ISO of=/dev/sdb";

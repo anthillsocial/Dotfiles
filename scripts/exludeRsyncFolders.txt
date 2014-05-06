@@ -1,0 +1,10 @@
+.bash_history
+.bash_logout
+Dropbox
+.cache
+.recently-used.xbel
+.dropbox
+.mozilla/firefox/m24yk3qg.default/Cache
+.cache
+.local/share/Trash
+Mounts

@@ -22,3 +22,5 @@ and they will be added to the 'runtimepath'" i.e:
 	git clone git://github.com/tpope/vim-sensible.git
 	
 I also use the cinnamon desktop.
+
+some extra text

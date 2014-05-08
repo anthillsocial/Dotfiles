@@ -23,13 +23,27 @@ installcinnamon(){
 	pacman -S cinnamon
 	echo "Add to: pacman.conf\n[cinnamon]\nServer = http://www.equinox-project.org/repos/arch/$arch\n"
 	echo "Add to: ~/.xinitrc\nexec cinnamon-session"
+	echo "For auto start add to end of:~/.bash_profile\n[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx"
+
 }
 installdesktopapps(){
-	packer -S zim-bzr dropbox nemo-dropbox-git
-	packan -S gnome-terminal chromium nemo
-	# Create service
+	# some base apps
+	packer -S nemo
+	pacman -S gnome-terminal chromium
+	
+	# Nice .pdf reader
+	packer -S zathura zathura-pdf-poppler zathura-ps zathura-djvu
+
+	# Install Zim with a spell checker
+	packer -S zim-bzr gtkspell python2-gtkspell aspell-en 
+	
+	# Install dropbox and Create service
+	pacman -S dropbox nemo-dropbox-git
 	systemctl enable dropboxd.service
-	systemctl start dropbox.d.servcice
+	systemctl start dropbox.d.service
+
+	# owncloud client
+	packer -S owncloud-client
 }
 checkforerrors(){
  	# search for potential errors in dmesg or journalctl
@@ -89,7 +103,7 @@ installA(){
 	passwd $DEFAULTUSER
 
 	# Install some default apps
-	pacman -S vim sudo git alsa-utils
+	pacman -S vim sudo git alsa-utils openssh
         
         # And setup pacman
 	pacman-key --init
@@ -128,7 +142,7 @@ installA(){
 }
 installnetwork(){
 	# Setup network for: wiredAutoplug, wifimenu, netctl-auto rfkill
-	pacman -S ifplugd dialog wpa_actiond
+	pacman -S ifplugd dialog iw wpa_supplicant wpa_actiond dhcpcd
 	ip link set $WIFIINTERFACE up
 	ip link set $ETHINTERFACE up
 	ip a

@@ -126,7 +126,7 @@ installA(){
 	echo -e "KEYMAP=uk\nFONT=ter-p16n.psf.gz" > /etc/vconsole.conf
 
 	# Set time 
-	ln -s /usr/share/zoneinfo/Greenwich /etc/localtime
+	ln -sf  /usr/share/zoneinfo/Europe/London /etc/localtime
 	hwclock --systohc --utc
 	systemctl start ntpd.service
 	systemctl enable ntpd.service
@@ -156,6 +156,7 @@ installmanual(){
 	echo "RUN:\nEDITOR=vim visudo"
 	echo "Then scroll down until you find this line and uncomment it:\n %wheel ALL=(ALL) ALL\n"
 	echo -e "RUN:\n systemctl enable netctl-ifplugd@interface_name.service\n"
+	echo -e "ADD TO: /etc/profile\nexport EDITOR=vim"
 }
 start_me
 

@@ -1,8 +1,9 @@
 WIFI=`ip link | grep "3: w*" -m 1| gawk -F: '{print $2}'`
 ETH=`ip link | grep "2: e*" -m 1 | gawk -F: '{print $2}'`
 SSID="goat"
-PASS="123456768"
+PASS="carbon31"
 NO_VIRT="--no-virt"
+#NO_VIRT=""
 echo -e "\n\nWIFI=$WIFI ETH=$ETH SSID=$SSID PASS=$PASS NO_VIRT=$NO_VIRT\n\n"
 
 

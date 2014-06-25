@@ -1,0 +1,6 @@
+# Update pacman with pre and post snappshots
+# Uses snapper and a wrapper script 'snp' found at:
+# /usr/bin/local
+snp pacman -Syu
+# Now regen the EfiStub in case a new version of linux has been installed
+sudo /home/tom/scr/btrfsregenEFISTUB.sh

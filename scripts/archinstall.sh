@@ -103,7 +103,7 @@ installA(){
 	passwd $DEFAULTUSER
 
 	# Install some default apps
-	pacman -S vim sudo git alsa-utils openssh
+	pacman -S vim sudo git alsa-utils openssh vim-pathogen
         
         # And setup pacman
 	pacman-key --init

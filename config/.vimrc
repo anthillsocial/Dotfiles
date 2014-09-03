@@ -1,12 +1,18 @@
-"enable easy moduel managemnt"
+"enable easy module managemnt"
 execute pathogen#infect()
 let g:airline_powerline_fonts=1 "make the powerline look groovy
+
+"Save swap files in a central directory"
+set backupdir=~/tmp
+set swapfile
+set dir=~/tmp
 
 " Ideas for this vim setup taken from: 
 "     http://nvie.com/posts/how-i-boosted-my-vim/
 set nocompatible
 set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
+set expandtab 	  " When clicking tab create spaces (good for python)
 set backspace=indent,eol,start
                   " allow backspacing over everything in insert mode
 set autoindent    " always set autoindenting on

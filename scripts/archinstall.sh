@@ -9,6 +9,8 @@ start_me(){
 	#installA
 	#installnetwork
 	#installmanual
+	#installuser
+	#installsecurity
 	#installmousetrackpad
 	#installsearch
 	#installpacker
@@ -17,7 +19,15 @@ start_me(){
 	#installdesktop
 	#installcinnamon
 	#installdesktopapps
-	checkforerrors
+	#installbluetooth
+	#checkforerrors
+}
+installbluetooth(){
+	pacman -S bluez bluez-utils 
+	packer -S cinnamon-bluetooth
+	modprobe btusb
+	systemctl start bluetooth
+	gpasswd --add $DEFAULTUSER lp
 }
 installcinnamon(){
 	pacman -S cinnamon
@@ -104,8 +114,12 @@ installA(){
 
 	# Install some default apps
 	pacman -S vim sudo git alsa-utils openssh vim-pathogen
-        
-        # And setup pacman
+    
+    # Allow users to use sudo
+    # EDITOR=vim visudo
+    # The uncomment the line: #%wheel      ALL=(ALL) ALL
+
+    # And setup pacman
 	pacman-key --init
 	pacman-key --populate archlinux
 
@@ -157,6 +171,13 @@ installmanual(){
 	echo "Then scroll down until you find this line and uncomment it:\n %wheel ALL=(ALL) ALL\n"
 	echo -e "RUN:\n systemctl enable netctl-ifplugd@interface_name.service\n"
 	echo -e "ADD TO: /etc/profile\nexport EDITOR=vim"
+}
+installsecurity(){
+    # Do by hand
+    # Disable root login over SSH
+    # vim /etc/ssh/sshd_config
+    # SET:   PermitRootLogin no
+    # systemctl restart sshd
 }
 start_me
 

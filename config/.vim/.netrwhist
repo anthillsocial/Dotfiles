@@ -1,7 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/tomkeene/mnt/anthill/legit.theanthillsocial.co.uk/themes/legit/views/main'
-let g:netrw_dirhist_2='/home/tomkeene/mnt/anthill/legit.theanthillsocial.co.uk/themes/legit/views/reports'
-let g:netrw_dirhist_3='/home/tomkeene/mnt/anthill/legit.theanthillsocial.co.uk/themes/legit/views'
-let g:netrw_dirhist_4='/home/tomkeene/mnt/anthill/legit.theanthillsocial.co.uk/themes/legit'
-let g:netrw_dirhist_5='/home/tomkeene/mnt/anthill/legit.theanthillsocial.co.uk/themes/legit/css'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/tom/ownCloud/Shared/Citizen_Sense/01Research/CitizenSensePlatform/frackerplat'
+let g:netrw_dirhist_2='/home/tom/ownCloud/Shared/Citizen_Sense/04Deployment_Pollution/PlatformDevelopment/master'

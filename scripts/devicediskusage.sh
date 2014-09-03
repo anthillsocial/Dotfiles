@@ -1,1 +1,1 @@
-ncdu
+ncdu --exclude-caches

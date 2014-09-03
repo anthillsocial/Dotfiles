@@ -22,3 +22,6 @@ and they will be added to the 'runtimepath'" i.e:
 	git clone git://github.com/tpope/vim-sensible.git
 	
 This collection is very much a work in progress!
+
+if name == "main":
+	main()

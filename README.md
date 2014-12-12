@@ -24,4 +24,5 @@ and they will be added to the 'runtimepath'" i.e:
 This collection is very much a work in progress, lots of messy reminders to my self!
 
 ## License
-All code released under GNU General Public Licence
+All code released under GNU General Public Licence.
+Author: Tom Keene (Unless otherwise stated)

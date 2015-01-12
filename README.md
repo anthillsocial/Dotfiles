@@ -21,7 +21,8 @@ and they will be added to the 'runtimepath'" i.e:
 	cd ~/myconfig/.vim/bundle
 	git clone git://github.com/tpope/vim-sensible.git
 	
-This collection is very much a work in progress!
+This collection is very much a work in progress, lots of messy reminders to my self!
 
-if name == "main":
-	main()
+## License
+All code released under GNU General Public Licence.
+Author: Tom Keene (Unless otherwise stated)

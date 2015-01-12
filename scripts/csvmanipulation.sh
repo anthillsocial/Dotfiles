@@ -9,6 +9,9 @@ cat input.csv | sed "1 d"
 # Strip all lines that are commented out
 grep -v ^# input.csv 
 
+# Return line numbers
+grep -nr 'search string' file.csv
+
 # Convert a tab seperated file to a comma seperated one
 cat input.tsv | tr "\\t" ","
 
@@ -32,6 +35,9 @@ sed -n "10,14 p" input.csv
 
 # Extract columns 2, 4, 5 and 6
 cut -d , -f 2,4-6 input.csv
+
+# Read the 6th colum, remove the first line, delete blank lines, average
+head data9thSept.csv | cut -d , -f 6 | grep . | sed "1 d" | awk '{ total += $1; count++ } END { print total/count }'
 
 # Any of the above commands with slight modification can be used 
 # with bzip2 or gzip'ed files

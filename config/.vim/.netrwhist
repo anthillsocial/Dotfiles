@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/tom/ownCloud/Shared/Citizen_Sense/01Research/CitizenSensePlatform/frackerplat'
-let g:netrw_dirhist_2='/home/tom/ownCloud/Shared/Citizen_Sense/04Deployment_Pollution/PlatformDevelopment/master'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/tom/Dropbox/Projects/sonicbike/code/src'
+let g:netrw_dirhist_2='/home/tom/Dropbox/Projects/sonicbike/code'
+let g:netrw_dirhist_3='/home/tom/Dropbox/Projects/sonicbike/code/lib'
+let g:netrw_dirhist_4='/home/tom/Dropbox/Projects/sonicbike/bicrophonic1'
+let g:netrw_dirhist_5='/home/tom/Dropbox/Projects/sonicbike/bicrophonic1/lib'
+let g:netrw_dirhist_6='/home/tom/Dropbox/Projects/sonicbike/of_v0.8.4_linux64_release/apps/myApps/SonicBikeAudioEngine/src'

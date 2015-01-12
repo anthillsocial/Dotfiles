@@ -1,9 +1,9 @@
 clear
 echo "DEFINE A NEW CONNECTION"
-echo "sftpman setup --id "my-machine" --host "HOSTNAME_OR_IP" --user "USERNAME" --mount_point "/REMOTE_PATH" --auth_method=password"
-echo -e "\nMOUNT:\nsftpman mount my-machine"
-echo -e "\nUNMOUNT:\nsftpman umount my-machine"
-echo -e "\nFILE LIST"
+echo "sftpman setup --id "PROFILENAME" --host "HOSTNAME_OR_IP" --user "USERNAME" --mount_point "/REMOTE_PATH" --auth_method=password"
+echo -e "\nMOUNT:\nsftpman mount PROFILENAME"
+echo -e "\nUNMOUNT:\nsftpman umount PROFILENAME"
+echo -e "\nFILE LIST: ~/.config/sftpman/mounts "
 ls ~/.config/sftpman/mounts -lah
 echo ""
 

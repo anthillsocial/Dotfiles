@@ -3,9 +3,10 @@ echo "REMEMBER TO SU ROOT THEN RUN"
 INTERFACE=$(ip a | grep enp0s20u6)
 DEVICE="enp0s20u6"
 if [ "$INTERFACE" == "" ]; then
+	echo "Cannot connect via: $DEVICE"
     DEVICE="enp0s20u3"
 fi
-echo "connecting via $DEVICE"
+echo "Attempt to connect via $DEVICE"
 # On the machine providing internet
 iptables -A POSTROUTING -t nat -j MASQUERADE
 echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward > /dev/null

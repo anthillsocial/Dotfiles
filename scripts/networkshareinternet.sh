@@ -1,7 +1,7 @@
 # Instructions from: https://github.com/anujdeshpande/BBB-workshop
 echo "REMEMBER TO SU ROOT THEN RUN"
 INTERFACE=$(ip a | grep enp0s20u6)
-DEVICE="enp0s20u6"
+DEVICE="enp0s26u1u1"
 if [ "$INTERFACE" == "" ]; then
 	echo "Cannot connect via: $DEVICE"
     DEVICE="enp0s20u3"

@@ -1,4 +1,5 @@
 # SET VARIABLES
+# I should invetsigate: https://bitbucket.org/flexiondotorg/archinstaller
 HOSTNAME=ArchT440
 DEFAULTUSER=tom
 REALNAME="Tom Keene"

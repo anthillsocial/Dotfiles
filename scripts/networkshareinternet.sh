@@ -1,10 +1,6 @@
 # Instructions from: https://github.com/anujdeshpande/BBB-workshop
 echo "REMEMBER TO SU ROOT THEN RUN"
-INTERFACE=$(ip a | grep enp0s20u6)
-DEVICE="enp0s20u6"
-if [ "$INTERFACE" == "" ]; then
-    DEVICE="enp0s20u3"
-fi
+DEVICE=$(ip a | grep '<' | awk '{print $2}' | sed 's/:\+$//' | grep -Ev 'lo|enp0s25|wlp4s0')
 echo "connecting via $DEVICE"
 # On the machine providing internet
 iptables -A POSTROUTING -t nat -j MASQUERADE

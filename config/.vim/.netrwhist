@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/tom/Desktop/of_v0.8.4_linux64_release/apps/myApps/SonicBikeAudioEngine/src'
-let g:netrw_dirhist_2='/home/tom/Desktop/of_v0.8.4_linux64_release/apps/myApps/SonicBikeAudioEngine'
-let g:netrw_dirhist_3='/home/tom/Desktop/of_v0.8.4_linux64_release/apps/myApps/SonicBikeAudioEngine/src'
-let g:netrw_dirhist_4='/home/tom/Desktop/of_v0.8.4_linux64_release/apps/myApps/SonicBikeAudioEngine'
-let g:netrw_dirhist_5='/home/tom/Desktop/of_v0.8.4_linux64_release/apps/myApps/SonicBikeAudioEngine/src'
-let g:netrw_dirhist_6='/home/tom/Desktop/of_v0.8.4_linux64_release/apps/myApps/SonicBikeAudioEngine'
-let g:netrw_dirhist_7='/home/tom/Desktop/of_v0.8.4_linux64_release/apps/myApps/SonicBikeAudioEngine/bin'
-let g:netrw_dirhist_8='/home/tom/Desktop/of_v0.8.4_linux64_release/apps/myApps/SonicBikeAudioEngine/bin/data'
-let g:netrw_dirhist_9='/home/tom/Desktop/of_v0.8.4_linux64_release/apps/myApps/SonicBikeAudioEngine/src'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/tom/Desktop/csk/libraries'
+let g:netrw_dirhist_2='/home/tom/Desktop/csk'
+let g:netrw_dirhist_3='/home/tom/Desktop/csk/libraries'
+let g:netrw_dirhist_4='/home/tom/Desktop/csk'

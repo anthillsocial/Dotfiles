@@ -13,3 +13,5 @@ iptables -A FORWARD -i $DEVICE -o internet0 -j ACCEPT
 #Database file: /var/lib/dhcp/dhcpd.leases
 #PID file: /var/run/dhcpd.pid
 dhcpd $DEVICE 
+echo "SHARED:Wifi TO:$DEVICE ON:$ROUTERIP"
+echo "cat /var/lib/dhcp/dhcpd.leases to view leases"

@@ -1,4 +1,5 @@
 #!/bin/bash
+killall dhcpd
 DEVICE="enp0s25"
 ROUTERIP=139.96.30.1 # 192.168.123.1
 ip link set $DEVICE down
@@ -15,3 +16,4 @@ iptables -A FORWARD -i $DEVICE -o internet0 -j ACCEPT
 dhcpd $DEVICE 
 echo "SHARED:Wifi TO:$DEVICE ON:$ROUTERIP"
 echo "cat /var/lib/dhcp/dhcpd.leases to view leases"
+cat /var/lib/dhcp/dhcpd.leases 

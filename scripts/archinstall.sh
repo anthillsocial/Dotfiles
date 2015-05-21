@@ -85,15 +85,14 @@ installT440pvideo(){
 	systemctl start bumblebeed.service
 }
 installpacker(){
-	# TODO: This section needs work!!
 	# Install packer 
 	pacman -S base-devel fakeroot jshon expac
 	mkdir /opt/packer
-        chown $DEFAULTUSER /opt/packer
-        cd /opt/packer
+    chown $DEFAULTUSER /opt/packer
+    cd /opt/packer
   	wget https://aur.archlinux.org/packages/pa/packer/PKGBUILD
-        makepkg
-        pacman -U packer-*.pkg.tar.gz
+    makepkg
+    pacman -U packer-*.pkg.tar.gz
 }
 installmousetrackpad(){
         #Mouse and trackpad
@@ -109,7 +108,8 @@ installA(){
 	# set the root password and default user
 	echo -e "\nSET ROOT PASSWORD:\n"
 	passwd
-	useradd -m -g $DEFAULTUSER -G wheel,storage,power,network -c $REALNAME -s /bin/bash $DEFAULTUSER
+	#useradd -m -g $DEFAULTUSER -G wheel,storage,power,network -c $REALNAME -s /bin/bash $DEFAULTUSER
+	useradd -m -G wheel -s /bin/bash $DEFAULTUSER
 	echo -e "\nSET USER PASSWORD FOR $DEFAULTUSER:\n"
 	passwd $DEFAULTUSER
 
@@ -117,6 +117,7 @@ installA(){
 	pacman -S vim sudo git alsa-utils openssh vim-pathogen
     
     # Allow users to use sudo
+    # pacman -S sudo
     # EDITOR=vim visudo
     # The uncomment the line: #%wheel      ALL=(ALL) ALL
 

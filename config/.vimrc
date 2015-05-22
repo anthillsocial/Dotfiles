@@ -1,6 +1,6 @@
 "enable easy module managemnt"
-execute pathogen#infect()
-let g:airline_powerline_fonts=1 "make the powerline look groovy
+"execute pathogen#infect()
+"let g:airline_powerline_fonts=1 "make the powerline look groovy
 
 "Save swap files in a central directory"
 set backupdir=~/tmp
